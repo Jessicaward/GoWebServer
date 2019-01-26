@@ -1,0 +1,5 @@
+- Create routing engine
+- Set up actual DB
+- Create repositories for Team and Driver
+- Find way to return HTML as response
+- Create logging functionality to log server requests
