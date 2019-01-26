@@ -7,15 +7,17 @@ import (
 
 func main() {
 	drivers := data.GetAllDrivers()
-	ferrari := new(model.Team)
-
-	ferrari.ID = 1
-	ferrari.Name = "Ferrari"
-	ferrari.CarColour = "Scarlett red"
-	model.PrintTeam(ferrari)
+	teams := data.GetAllTeams()
 
 	i := 0
-	for i <= len(drivers) {
+	for i <= (len(drivers) - 1) {
 		model.PrintDriver(drivers[i])
+		i++
+	}
+
+	i = 0
+	for i <= (len(teams) - 1) {
+		model.PrintTeam(teams[i])
+		i++
 	}
 }

@@ -12,6 +12,6 @@ type Driver struct {
 	TeamID int
 }
 
-func PrintDriver(d *Driver) {
+func PrintDriver(d Driver) {
 	fmt.Println(strconv.Itoa(d.ID) + ": " + d.Name)
 }

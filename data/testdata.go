@@ -31,3 +31,21 @@ func GetAllDrivers() []model.Driver {
 
 	return Drivers
 }
+
+//NOTE: This is a temporary data souce
+func GetAllTeams() []model.Team {
+	Teams := make([]model.Team, 0, 10)
+
+	Teams = append(Teams, model.Team{1, "Mercedes", "Silver"})
+	Teams = append(Teams, model.Team{2, "Ferrari", "Red"})
+	Teams = append(Teams, model.Team{3, "Red Bull", "Navy"})
+	Teams = append(Teams, model.Team{4, "Force India", "Pink"})
+	Teams = append(Teams, model.Team{5, "Williams", "White"})
+	Teams = append(Teams, model.Team{6, "Renault", "Yellow"})
+	Teams = append(Teams, model.Team{7, "Haas", "White"})
+	Teams = append(Teams, model.Team{8, "Toro Rosso", "Blue"})
+	Teams = append(Teams, model.Team{9, "Sauber", "White"})
+	Teams = append(Teams, model.Team{10, "McLaren", "Orange"})
+
+	return Teams
+}

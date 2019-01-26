@@ -11,6 +11,6 @@ type Team struct {
 	CarColour string
 }
 
-func PrintTeam(t *Team) {
+func PrintTeam(t Team) {
 	fmt.Println(strconv.Itoa(t.ID) + ": " + t.Name + " is " + t.CarColour)
 }
