@@ -13,5 +13,5 @@ type Driver struct {
 }
 
 func PrintDriver(d Driver) {
-	fmt.Println(strconv.Itoa(d.ID) + ": " + d.Name)
+	fmt.Println(strconv.Itoa(d.Number) + ": " + d.Name)
 }
