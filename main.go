@@ -36,11 +36,26 @@ func driverHandler(w http.ResponseWriter, r *http.Request) {
 	fmt.Fprintf(w, "<h1>%s</h1><div>%s</div>", driver.Name, driver.Number)
 }
 
+func teamHandler(w http.ResponseWriter, r *http.Request) {
+	teams := data.GetAllTeams()
+
+	id, err := strconv.Atoi(r.URL.Path[len("/team/"):])
+
+	if err != nil {
+		log.Fatal(err)
+	}
+
+	team := teams[id]
+
+	fmt.Fprintf(w, "<h1>%s</h1><div>%s</div>", team.Name, team.CarColour)
+}
+
 func main() {
 	//Routes
 	//todo: move these to a routing packge
-	http.HandleFunc("/driver/", driverHandler)
 	http.HandleFunc("/", handler)
+	http.HandleFunc("/team/", teamHandler)
+	http.HandleFunc("/driver/", driverHandler)
 	log.Fatal(http.ListenAndServe(":8080", nil))
 }
 
