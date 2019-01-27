@@ -1,4 +1,5 @@
 - Create routing engine
+    - Move routing functionality from main.go to route package.
 - Set up actual DB
 - Create repositories for Team and Driver
 - Find way to return HTML as response
