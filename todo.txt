@@ -4,3 +4,4 @@
 - Create repositories for Team and Driver
 - Find way to return HTML as response
 - Create logging functionality to log server requests
+- Create authentication, so user is given generated authentiacation token 
